@@ -1,0 +1,21 @@
+
+# Add given directory to the $PATH.
+add_to_path ()
+{
+    if [ ! -z $1 ]; then
+	# directory=`readlink -f $1`
+	directory=$1
+	if [ -d "$directory" ]; then
+	    export PATH=$PATH:$directory
+	    # echo $PATH
+	fi
+    fi
+}
+
+add_to_path "$HOME/bin"
+add_to_path "/var/lib/gems/1.8/bin"
+# add_to_path "$HOME/distrib/dev/mumbles/src"
+add_to_path "/usr/lib/git-core"
+# add_to_path "/var/lib/gems/1.8/gems/rcodetools-0.8.5.0/bin"
+
+# export GIT_PROXY_COMMAND="/home/kons/bin/proxy-wrapper.sh"

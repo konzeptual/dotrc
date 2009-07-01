@@ -1,0 +1,37 @@
+;; Declare what this file is for.
+(in-package :stumpwm)
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;; Autostart
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; Most of the autostart commands are in gnome-session
+;; (stardict)
+;; (bittorrent)
+;; (emacs-daemon)
+
+;; http://code.google.com/p/deftsp-dotfiles/source/browse/trunk/.stumpwmrc
+;; I don't really want to be constantly typing "concatenate 'string" - this simplifies things.
+;; Thanks to sabetts of #stumpwm
+(defun cat (&rest strings)
+  "Concatenates strings, like the Unix command 'cat'. A shortcut for (concatenate 'string foo bar)."
+  (apply 'concatenate 'string strings))
+
+(defun expand-file-name (path &optional default-directory)
+  (let ((first-char (subseq path 0 1))
+        (home-dir (cat (getenv "HOME") "/"))
+        (dir (if default-directory
+                 (if (string= (subseq (reverse default-directory) 0 1) "/")
+                     default-directory
+		   (cat default-directory "/")))))
+    (cond ((string= first-char "~") (cat home-dir (subseq path 2)))
+          ((string= first-char "/") path)
+          (dir (if (string= (subseq dir 0 1) "/")
+                   (cat dir path)
+		 (expand-file-name (cat dir path))))
+          (t (cat home-dir path)))))
+
+(load (expand-file-name "~/.stumpwm.d/programs.lisp"))
+(load (expand-file-name "~/.stumpwm.d/navigation.lisp"))
+(load (expand-file-name "~/.stumpwm.d/gui.lisp"))
+(load (expand-file-name "~/.stumpwm.d/test.lisp"))
