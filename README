@@ -1,0 +1,12 @@
+dotrc files
+========
+* Private config files for linux-box
+  - bash
+  - stumpwm
+  - autotest
+* Usage
+  cd $HOME
+  git clone git://github.com/krick/dotrc.git  .dotrc
+  cd .dotrc
+  # this will back up existing files and create sym links to the dotrc-files.
+  ./create_links.sh
