@@ -1,5 +1,11 @@
 #!/bin/bash
+###########################################################
+# Script to create links in homed directory to files,
+# starting with dot in a current directory
+###########################################################
+
 backup_dir='/tmp/rc_backup'
+# files, started with dot, except git related fiels
 rc_files=`ls -A | grep -v git | grep ^[\.]`
 
 read -p "We are going to trash following files in your home dir:
@@ -7,7 +13,6 @@ $rc_files
 and create links to the current rc_files. ok? Y/n " sure
 if [[ "$sure" == 'y' || "$sure" == '' ]]; then
     mkdir -p $backup_dir
-    # echo all files, started with dot, exept git related fiels
     for file in $rc_files ; do
 	echo $file
 	mv $HOME/$file $backup_dir
