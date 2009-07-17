@@ -1,5 +1,6 @@
 # enable color support of ls and also add handy aliases
-if [ "$TERM" != "dumb" ]; then
+[ -z "$PS1" ] && return
+# if [ "$TERM" != "dumb" ]; then
     eval "`dircolors -b`"
     alias ls='ls --color=auto -h'
     #alias dir='ls --color=auto --format=vertical'
@@ -11,7 +12,7 @@ if [ "$TERM" != "dumb" ]; then
     cd_ls () { cd ${1} ; ls -l --color ; }
     alias cd='cd_ls'
     alias cdd='cd -'
-fi
+# fi
 
 
 alias UNI='ssh antipin@141.2.243.3 -p 6942 -Y'
