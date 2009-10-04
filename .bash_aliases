@@ -25,6 +25,7 @@ alias pch='ssh antipin@141.2.243.61 -Y'
 alias osoznanFtp='lftp -u osoznanru_updater osoznan.ru'
 # alias osru='ssh osoznanru@osoznan.ru'
 alias osru='ssh konsty@osoznan.ru'
+alias dh='ssh konsty@osoznan.ru'
 
 alias e='emacsclient'
 alias eb='emacsclient -nw'
