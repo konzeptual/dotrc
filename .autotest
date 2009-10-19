@@ -7,3 +7,7 @@ PENDING = true
 STICKY = false
 SUCCESS_SOUND = ''
 FAILURE_SOUND = ''
+
+Autotest.add_hook :initialize do |at|
+%w{.hg .git .svn stories tmtags Rakefile Capfile README spec/spec.opts spec/rcov.opts vendor/gems autotest svn-commit .DS_Store }.each {|exception|at.add_exception(exception)}
+end
