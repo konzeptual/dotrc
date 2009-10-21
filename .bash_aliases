@@ -26,6 +26,7 @@ alias osoznanFtp='lftp -u osoznanru_updater osoznan.ru'
 # alias osru='ssh osoznanru@osoznan.ru'
 alias osru='ssh konsty@osoznan.ru'
 alias dh='ssh konsty@osoznan.ru'
+alias intovps='ssh konsty@89.33.197.84'
 
 alias e='emacsclient'
 alias eb='emacsclient -nw'
