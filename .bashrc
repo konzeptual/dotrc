@@ -31,7 +31,7 @@ fi
 # esac
 
 # If we are at home - do not show username and host
-if [ $HOSTNAME == 'aldan' -a $USERNAME == 'kons' ]; then
+if [ $HOME == '/home/kons' ]; then
     PS1='${debian_chroot:+($debian_chroot)}[\[\033[01;34m\]\w\[\033[00m\]]\$ '
 else
     PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:[\[\033[01;34m\]\w\[\033[00m\]]\$ '
