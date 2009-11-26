@@ -23,6 +23,7 @@ alias pc7='ssh antipin@141.2.243.7 -Y'
 alias pch='ssh antipin@141.2.243.61 -Y'
 
 alias aldan_intovps='ssh konsty@89.33.197.84'
+alias aldan_intovps_git='ssh git@89.33.197.84'
 
 alias e='emacsclient'
 alias eb='emacsclient -nw'

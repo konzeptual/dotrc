@@ -1,3 +1,11 @@
+# Using rails templates
+# http://github.com/ryanb/rails-templates
+function railsapp {
+    template=$1
+    appname=$2
+    shift 2
+    rails $appname -m http://github.com/krick/rails-templates/raw/master/$template.rb $@
+}
 
 # Add given directory to the $PATH.
 add_to_path ()
