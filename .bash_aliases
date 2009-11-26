@@ -22,11 +22,7 @@ alias HLTdev='ssh -p 10000 antipin@localhost -Y'
 alias pc7='ssh antipin@141.2.243.7 -Y'
 alias pch='ssh antipin@141.2.243.61 -Y'
 
-alias osoznanFtp='lftp -u osoznanru_updater osoznan.ru'
-# alias osru='ssh osoznanru@osoznan.ru'
-alias osru='ssh konsty@osoznan.ru'
-alias dh='ssh konsty@osoznan.ru'
-alias intovps='ssh konsty@89.33.197.84'
+alias aldan_intovps='ssh konsty@89.33.197.84'
 
 alias e='emacsclient'
 alias eb='emacsclient -nw'
