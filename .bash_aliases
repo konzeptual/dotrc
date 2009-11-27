@@ -31,7 +31,7 @@ alias es='sudo emacs -nw --no-init-file'
 alias argouml='java -jar /home/kons/distrib/dev/argouml/argouml-0.28/argouml.jar'
 alias trash="mv -t ~/.local/share/Trash/files --backup=t"
 
-alias nginx_check_conf="sudo /opt/local/nginx/sbin/nginx -c /opt/local/nginx/conf/nginx.conf -t"
+alias nginx_check_conf="sudo /opt/nginx/sbin/nginx -c /opt/nginx/conf/nginx.conf -t"
 
 ## WebDev
 alias phpcs='phpcs --extensions=php'
