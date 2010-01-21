@@ -22,9 +22,10 @@ alias HLTdev='ssh -p 10000 antipin@localhost -Y'
 alias pc7='ssh antipin@141.2.243.7 -Y'
 alias pch='ssh antipin@141.2.243.61 -Y'
 
+alias konzeptual_intovps='ssh konsty@188.241.113.226'
 alias aldan_intovps='ssh konsty@89.33.197.84'
 alias aldan_intovps_git='ssh git@89.33.197.84'
-
+alias kob_su='ssh konsty@kob.su -p 22188'
 alias e='emacsclient'
 alias eb='emacsclient -nw'
 alias es='sudo emacs -nw --no-init-file'
@@ -34,8 +35,7 @@ alias trash="mv -t ~/tmp --backup=t"
 alias nginx_check_conf="sudo /opt/nginx/sbin/nginx -c /opt/nginx/conf/nginx.conf -t"
 
 ## WebDev
-alias phpcs='phpcs --extensions=php'
-alias sf='php symfony'
+alias logout='gnome-session-save --logout'
 
 # show progress on copying
 # http://digg.com/d1KnBp
