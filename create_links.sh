@@ -2,6 +2,7 @@
 ###########################################################
 # Script to create links in homed directory to files,
 # starting with dot in a current directory
+# YOU SHOULD START it from .dotrc directory!
 ###########################################################
 
 backup_dir='/tmp/rc_backup'
